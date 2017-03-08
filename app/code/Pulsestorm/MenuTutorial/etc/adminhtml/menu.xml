@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Pulsestorm_MenuTutorial::top" resource="Pulsestorm_MenuTutorial::top" title="Tutorial Menu Items"
+             action="pulsestorm_menututorial/index/index" module="Pulsestorm_MenuTutorial" sortOrder="999"/>
+        <add id="Pulsestorm_MenuTutorial::config" resource="Pulsestorm_MenuTutorial::config"
+             title="Second Level Menu Item" action="pulsestorm_menututorial/index/index"
+             module="Pulsestorm_MenuTutorial" sortOrder="999" parent="Pulsestorm_MenuTutorial::top"
+             dependsOnModule="Pulsestorm_MenuTutorial"/>
+        <add id="Pulsestorm_MenuTutorial::third_level_menu" resource="Pulsestorm_MenuTutorial::third_level_menu"
+             title="Third Level Menu" action="pulsestorm_menututorial/item/item" module="Pulsestorm_MenuTutorial"
+             sortOrder="10" parent="Pulsestorm_MenuTutorial::config" dependsOnModule="Pulsestorm_MenuTutorial"/>
+    </menu>
+</config>
